@@ -1,0 +1,16 @@
+<div class="mystyle">
+  <h1>Welcome in my Movies!</h1>
+  </div>
+  
+
+<p>We have the Following Movies available</p>
+<div *ngIf="premiumAccount ==true">You are not eligible for this movie</div>
+  <div id="myMovieList">
+    <ul>
+      <li *ngFor="let movie of movieList" (click)="selectedMovie(movie)">
+      {{movie}}
+      </li>
+    </ul>
+  </div>
+  <h3>Recently added movie :{{recentMovie}}</h3>
+  

@@ -1,0 +1,12 @@
+<div id="cart">
+
+  
+  <h3>cart:</h3>
+  <ul>
+    <li *ngFor="let item of cart">{{item}}</li>
+  </ul>
+</div>
+<nav>
+  <a routerLink="/orders" routerLinkActive="Active">Proceed to Order</a>
+</nav>
+<router-outlet></router-outlet>
