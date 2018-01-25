@@ -8,6 +8,7 @@ import { FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+  data:any=[];
   public cart = JSON.parse(localStorage.getItem('cartItems'));
   orderform : FormGroup;
 
@@ -38,6 +39,8 @@ export class OrdersComponent implements OnInit {
     
     alert('Your Form has been Submitted');
     //console.log(this.orderform.value);
+    this.data=this.orderform.value;
+    console.log('values of personal details',this.data);
     
   }
   

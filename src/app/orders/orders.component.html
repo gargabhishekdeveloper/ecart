@@ -3,25 +3,26 @@
   <li *ngFor="let item of cart">{{item}}</li>
 </ul>
 <h2>Please Enter the Details:------</h2>
-<div>
+<div class="container">
   <form [formGroup]="orderform">
     <div class="form-group">
       <label>First Name:</label>
-      <input type="text" class = "form-control" formControlName="firstName"><br/>
+      <input type="text" class = "form-control" formControlName="firstName">
       <div *ngIf="orderform.controls['firstName'].hasError('required')" class="alert alert-danger">
         First Name is necessory
       </div>
+      <br/><br/>
       <label>Middle Name:</label>
-      <input type="text" class = "form-control" formControlName="middleName"><br/>
+      <input type="text" class = "form-control" formControlName="middleName"><br/><br/>
 
       <label>Last Name:</label>
-      <input type="text" class = "form-control" formControlName="lastName"><br/>
+      <input type="text" class = "form-control" formControlName="lastName"><br/><br/>
      <!-- <div *ngIf="orderform.controls['lastName'].hasError('required')" class="alert alert-danger">
           Last Name is necessory
         </div>-->
 
       <label>Date of Birth:</label>
-      <input type="text" class = "form-control" formControlName="dob"><br/><br/>
+      <input type="text" class = "form-control" formControlName="dob"><br/><br/><br/>
       <!--<div *ngIf="orderform.controls['dob'].hasError('required')" class="alert alert-danger">
           Date of Birth is necessory
         </div>-->
@@ -29,32 +30,32 @@
     <div formGroupName="address">
       <div class ="form-group">
             <label>House no.:</label>
-            <input type="text" class = "form-control" formControlName="houseNo"><br/>
+            <input type="text" class = "form-control" formControlName="houseNo"><br/><br/>
            <!-- <div *ngIf="orderform.controls['houseNo'].hasError('required')" class="alert alert-danger">
                House no. is necessory
                 </div>-->
 
             <label>Street:</label>
-            <input type="text" class = "form-control" formControlName="street"><br/>
+            <input type="text" class = "form-control" formControlName="street"><br/><br/>
 
             <label>City:</label>
-            <input type="text" class = "form-control" formControlName="city"><br/>
+            <input type="text" class = "form-control" formControlName="city"><br/><br/>
             <!--<div *ngIf="orderform.controls['city'].hasError('required')" class="alert alert-danger">
                 City is necessory
                </div>-->
 
             <label>State:</label>
-            <input type="text" class = "form-control" formControlName="state"><br/>
+            <input type="text" class = "form-control" formControlName="state"><br/><br/>
             <!--<div *ngIf="orderform.controls['state'].hasError('required')" class="alert alert-danger">
                 State is necessory
                </div>-->
 
             <label>Country:</label>
-            <input type="text" class = "form-control" formControlName="country"><br/>
+            <input type="text" class = "form-control" formControlName="country"><br/><br/>
 
       
             <label>Pin Code:</label>
-            <input type="text" class = "form-control" formControlName="pincode"><br/>
+            <input type="text" class = "form-control" formControlName="pincode"><br/><br/>
             <!--<div *ngIf="orderform.controls['pincode'].hasError('required')" class="alert alert-danger">
                 Pin Code is necessory
                </div>-->
@@ -62,7 +63,7 @@
     </div>
       
       <label>Mobile No.:</label>
-      <input type="text" class = "form-control" formControlName="mobile"><br/>
+      <input type="text" class = "form-control" formControlName="mobile"><br/><br/>
       <!--<div *ngIf="orderform.controls['mobile'].hasError('required')" class="alert alert-danger">
           Mobile No. is necessory
          </div>-->
@@ -77,7 +78,10 @@
     <div>
       <button (click)="formSubmit()">Submit</button>
     </div>
+    
    
   </form>
+  
  
 </div>
+
